@@ -1,4 +1,6 @@
-:80
+:80, :443
+
+tls internal
 
 root * /app/public
 php_server
