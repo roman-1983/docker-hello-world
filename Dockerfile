@@ -26,8 +26,8 @@ COPY --from=vendor /app/vendor /app/vendor
 
 ENV APP_ENV=prod
 
-# kein cache warmup hier erzwingen; macht dein Entrypoint sowieso sauber zur Runtime
-RUN chown -R www-data:www-data /app/var
+# Create var directory and set permissions (Symfony creates this at runtime)
+RUN mkdir -p /app/var && chown -R www-data:www-data /app/var
 
 EXPOSE 80
 CMD ["/usr/local/bin/entrypoint.sh"]
