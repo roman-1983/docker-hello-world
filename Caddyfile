@@ -1,7 +1,16 @@
-:80, :443
+{
+    auto_https off
+}
 
-tls internal
+:80 {
+    root * /app/public
+    php_server
+    file_server
+}
 
-root * /app/public
-php_server
-file_server
+:443 {
+    tls internal
+    root * /app/public
+    php_server
+    file_server
+}
