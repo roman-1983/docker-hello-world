@@ -8,7 +8,6 @@ services:
       DATABASE_URL: "pgsql://symfony:symfony@db:5432/symfony?charset=utf8"
     ports:
       - "8080:80"
-      - "1443:443"
     depends_on:
       - db
 

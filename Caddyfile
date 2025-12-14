@@ -3,10 +3,3 @@
     php_server
     file_server
 }
-
-https://:443 {
-    tls internal
-    root * /app/public
-    php_server
-    file_server
-}
